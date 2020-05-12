@@ -36,7 +36,7 @@
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro">iTravel</a></h1>
+        <h1><a href="{% url 'users-home' %}">iTravel</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="assets/img/logo.png" alt=""></a>-->
       </div>
@@ -44,7 +44,11 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <!-- <li class="menu-active"><a href="#intro">Home</a></li> -->
-          <li><a href="#about">Services</a></li>
+          <!-- <li><a href="#about">Services</a></li> -->
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'users-login' %}">Hello, {{user.username}}&nbsp;!</a></li>
+          
+        {% endif %}
           
           <!-- <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
@@ -54,7 +58,11 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li> -->
-          <li><a href="#contact">Login</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'users-logout' %}">logout</a></li>
+            {% else %}
+            <li><a href="{% url 'users-login' %}">login</a></li>
+          {% endif %}
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
