@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
-# added a comment line 
+def hotels_home(request):
+    return render(request, "hotels/hotels_home.html")

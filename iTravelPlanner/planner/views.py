@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
 def planner_home(request):
-    return render(request, "planner_home.html")
+    return render(request, "planner/planner_home.html")
