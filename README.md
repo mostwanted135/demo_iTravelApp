@@ -1,2 +1,2 @@
-# CC_TravelPlanner_TeamWhydah
+# CC_TravelPlanner_TeamWydah
 An innovative Travel Planner Web App.
