@@ -8,5 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('flights/', include('flights.urls')),
     path('planner/', include('planner.urls')),
-    path('hotels/', include('hotels.urls'))
+    path('hotels/', include('hotels.urls')),
 ]
