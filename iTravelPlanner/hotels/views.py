@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 from django.shortcuts import render
 from django.http import HttpResponse
-#from amadeus import Client, ResponseError
+from amadeus import Client, ResponseError
 
 # Amadeus connection details - Secret ID for API call
 amadeus = Client(
