@@ -5025,3 +5025,26 @@ h6 {
 
 .switch-wrap {
   margin-bottom: 10px; }
+
+
+
+/* AAA Edits */
+
+.input100 {
+  display: block;
+  width: 100%;
+  background: 0 0;
+  font-family: "Helvetica","Arial",sans-serif;
+  font-size: 18px;
+  color: #9d9d9d;
+  line-height: 1.2;
+  padding: 0 25px;
+  border: 0;
+  border: solid 1px #dca73a;
+  border-radius: 5px;
+  position: relative;
+}
+
+input.input100 {
+  height: 55px;
+}
