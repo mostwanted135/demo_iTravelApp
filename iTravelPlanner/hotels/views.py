@@ -41,6 +41,9 @@ def hotels_home(request):
         form = GetHotelDetails()
         return render(request, "hotels/hotels_home.html", {'form': form})
 
+def hotels_reserve(request):
+    return render(request, "hotels/hotels_reserve.html")
+
 def hotels_history(request):
     return render(request, "hotels/hotels_history.html")
 
