@@ -1,0 +1,14 @@
+{
+   "1": {
+      "IATA": "SYD",
+      "City": "Sydney"
+   },
+   "2": {
+      "IATA": "MEL",
+      "City": "Melbourne"
+   },
+   "3": {
+      "IATA": "TES",
+      "City": "Test"
+   }
+}

@@ -68,6 +68,9 @@
                         <div class="boking-datepicker">
                             {{ form.entercity }}
                         </div>
+                        <div id="match-list">
+                        </div>
+                        <script src="{% static 'hotels/js/cityautocomplete.js' %}"></script>
                     </div>
 
                     <!-- select in date -->
@@ -156,11 +159,12 @@
                         <!-- Single Room -->
                         <div class="single-room mb-50">
                             <div class="room-img">
-                               <a href="{% url 'hotels-reserve' %}"><img src="{% static 'hotels/img/rooms/room1.jpg' %}" alt=""></a>
+                               <!--a href="{% url 'hotels-reserve' %}"><img src="{% static 'hotels/img/rooms/room1.jpg' %}" alt=""></a-->
+                                <a href="{% url 'hotels-reserve' %}"><img src="{{baseImageUrl}}//{{hotel.hotel_pic}}" alt=""></a>
                             </div>
                             <div class="room-caption">
-                                <h3><a href="{% url 'hotels-reserve' %}">{{ hotel.hotel_name }}</a></h3>
-                                <h4><a href="{% url 'hotels-reserve' %}">{{ hotel.hotel_addr1 }}</a></h4>
+                                <h3><a href="{% url 'hotels-reserve' %}">{{ hotel.hotel_name }} </a></h3>
+                                <h4><a href="{% url 'hotels-reserve' %}">{{ hotel.hotel_street }} {{ hotel.hotel_city }} </a></h4>
                                 <div class="per-night">
                                     <span><u>$</u> {{ hotel.hotel_amt }} {{ hotel.hotel_curr }}  <span>/ per night</span></span>
                                 </div>

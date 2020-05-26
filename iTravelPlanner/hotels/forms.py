@@ -9,6 +9,7 @@ class GetHotelDetails(forms.Form):
             'onfocus': 'this.placeholder = ''',
             'onblur': "this.placeholder = 'Enter city'",
             'placeholder': "Enter city",
+            'id': 'searchcity'
         }
     ))
 

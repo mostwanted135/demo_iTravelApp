@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'hotels.apps.HotelsConfig'
 ]
 
 MIDDLEWARE = [
@@ -65,9 +66,16 @@ WSGI_APPLICATION = 'iTravelPlanner.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'Wydah',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
     }
 }
 
@@ -115,3 +123,7 @@ STATICFILES_DIRS = [
 LOGIN_REDIRECT_URL='users-home'
 
 # Varun's edit
+
+# Hotel App - requirements.txt modifications needed as below
+# Postgresql - psycopg2
+# database changed as default to PostreSQL
