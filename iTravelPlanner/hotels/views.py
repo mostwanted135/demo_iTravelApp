@@ -27,8 +27,8 @@ def hotels_home(request):
 
                 print("Hotel details for ", i)
                 hotel_data = HotelDetails()
-                hotel_data.hotel_name  = hotels[i]['hotel']['name']
-                hotel_data.hotel_id    = hotels[i]['hotel']['hotelId']
+                hotel_data.hotel_name = hotels[i]['hotel']['name']
+                hotel_data.hotel_id = hotels[i]['hotel']['hotelId']
                 hotel_data.hotel_street = hotels[i]['hotel']['address']['lines'][0]
                 hotel_data.hotel_city = hotels[i]['hotel']['address']['cityName']
                 hotel_data.hotel_state = hotels[i]['hotel']['address']['stateCode']

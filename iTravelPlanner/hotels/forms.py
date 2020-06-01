@@ -3,13 +3,11 @@ from django import forms
 INTEGER_CHOICES = [tuple([x, x]) for x in range(1, 6)]
 
 class GetHotelDetails(forms.Form):
-    entercity = forms.CharField(widget=forms.TextInput(
+    entercity = forms.CharField(required=False, widget=forms.TextInput(
         attrs={
             'class': 'input100',
-            'onfocus': 'this.placeholder = ''',
-            'onblur': "this.placeholder = 'Enter city'",
-            'placeholder': "Enter city",
-            'id': 'searchcity'
+            'placeholder': 'Enter city',
+            'id': 'searchcity',
         }
     ))
 
